@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Set and Get Value Javascript</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- load jquery and bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
@@ -12,29 +11,111 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div class="container">
-      <div class="card col-sm-4">
-        <div class="card-header">
-          <h4>Hitung Luas Lingkaran</h4>
+    <header>
+      <nav class="navbar fixed-top" id="navbar">       
+          <a class="navbar-brand" href="home.html">
+            <img src="asset\logo.png" alt="Logo" class="logo">
+            2D Shape Calculator
+          </a>
+      </nav>
+    </header>
+  <div class="container">
+    
+    <div class="card col-sm-4" id="form-luas">
+      <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn">Luas</button>
+          <button type="button" class="btn" onclick="toggleLuas()">Keliling</button>
         </div>
-        <div class="card-body">
-          sisi 1
-          <input type="number" id="s1" class="form-control">
-          sisi 2
-          <input type="number" id="s2" class="form-control">
-           tinggi
-          <input type="number" id="tinggi" class="form-control">
-          <button type="button" class="btn btn-info btn-block"
-          onclick="counttrapesium()">
-            Hitung
-          </button>
-          Hasil
-          <input type="text" id="hasil" class="form-control" readonly>
+        <div class="image-container">
+          <img src="asset\trapesium_img.png" alt="seg">
+        </div>
+        <div class="header-text-container">
+          <h4>Hitung Luas Trapesium</h4>
         </div>
       </div>
-      <a href="Segitiga.html" class="btn btn-success">Show</a>
-      <a href="Lingkaran.html" class="btn btn-success">Show</a>
+      <div class="card-body">
+        Sisi A
+        <input type="number" id="s1" class="form-control">
+        Sisi B
+        <input type="number" id="s2" class="form-control">
+        Tinggi
+        <input type="number" id="tinggi" class="form-control">
+        <div>
+        <button type="button" class="btn"
+        onclick="counttrapesium()">
+          Hitung
+        </button>
+        </div>
+        Hasil
+        <input type="text" id="hasil" class="form-control" readonly>
+      </div>
     </div>
-    <script src="formula.js"></script>
+
+    <div class="card col-sm-4" id="form-kel" style="display: none;">
+      <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn" onclick="togglekel()">Luas</button>
+          <button type="button" class="btn">Keliling</button>
+        </div>
+        <div class="image-container">
+          <img src="asset\trapesium_img.png" alt="seg">
+        </div>
+        <div class="header-text-container">
+          <h4>Hitung Keliling Trapesium</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        Sisi a
+        <input type="number" id="a" class="form-control">
+        Sisi b
+        <input type="number" id="b" class="form-control">
+        Sisi c
+        <input type="number" id="c" class="form-control">
+        Sisi d
+        <input type="number" id="d" class="form-control">
+        <div>
+        <button type="button" class="btn"
+        onclick="counttrapesiumkeliling()">
+          Hitung
+        </button>
+        </div>
+        Hasil
+        <input type="text" id="hasil-keliling" class="form-control" readonly>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <div class="keterangan">
+        <h1>Trapesium</h1>
+        <article>
+          <p>
+            Trapesium adalah bangun datar dua dimensi yang dibentuk oleh empat buah rusuk yang dua di antaranya saling sejajar namun tidak sama panjang. Trapesium termasuk jenis bangun datar segi empat yang mempunyai ciri khusus.        </article>         
+         <img src="asset\trapesium.png" alt="seg">
+      </div>
+      <div class="pre-step" id="pre-step">
+        <p>
+        Langkah-langkah akan muncul disini
+        </p>
+        <div class="image-container">
+          <img src="asset\pussy.png" alt="seg">
+        </div>
+      </div>
+      <div id="steps" class="fade-out" style="display: none;">
+        <div class="langkah-wrap">
+          <h2>Langkah-langkah</h2>
+          <div class="step-container"><div id="step1"></div></div>
+          <div class="step-container"><div id="step2"></div></div>
+          <div class="step-container"><div id="step3"></div></div>
+       </div>
+       <div class="image-step-wrap">
+        <div class="image-container">
+          <img src="asset\happypussi.gif" alt="seg">
+        </div>
+      </div>   
+    </div>
+    </div>
+  </div>
+  <script src="formula.js"></script>
   </body>
 </html>

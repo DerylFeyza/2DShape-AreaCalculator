@@ -11,69 +11,109 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-      <header>
-        <nav class="navbar fixed-top" id="navbar">       
-            <a class="navbar-brand" href="#">
-              <img src="asset\logo.png" alt="Logo" class="logo">
-              2D Shape Calculator
-            </a>
-        </nav>
-      </header>
-    <div class="container">
-      <div class="card col-sm-4" id="form">
-        <div class="card-header">
-          <div class="image-container">
-            <img src="asset\belahketupat_img.png" alt="seg">
-          </div>
+    <header>
+      <nav class="navbar fixed-top" id="navbar">       
+          <a class="navbar-brand" href="home.html">
+            <img src="asset\logo.png" alt="Logo" class="logo">
+            2D Shape Calculator
+          </a>
+      </nav>
+    </header>
+  <div class="container">
+    
+    <div class="card col-sm-4" id="form-luas">
+      <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn">Luas</button>
+          <button type="button" class="btn" onclick="toggleLuas()">Keliling</button>
+        </div>
+        <div class="image-container">
+          <img src="asset\belahketupat_img.png" alt="seg">
+        </div>
+        <div class="header-text-container">
           <h4>Hitung Luas Belah Ketupat</h4>
         </div>
-        <div class="card-body">
-          Diameter 1
-          <input type="number" id="d1" class="form-control">
-          Diameter 2
-          <input type="number" id="d2" class="form-control">
-          <div>
-          <button type="button" class="btn"
-          onclick="countbelahketupat()">
-            Hitung
-          </button>
-          </div>
-          Hasil
-          <input type="text" id="hasil" class="form-control" readonly>
-        </div>
       </div>
-      <div class="overlay">
-        <div class="keterangan">
-          <h1>Belah Ketupat</h1>
-          <article>
-            <p>
-              Belah ketupat adalah sebuah bangun datar yang bentuknya mirip ketupat. Belah ketupat memiliki empat sisi sama panjang dengan sisi-sisi yang berhadapan saling sejajar, namun sisi-sisi yang bersebelahan tidak saling tegak lurus
-            </p>
-          </article>         
-           <img src="asset\belahketupat.png" alt="seg">
+      <div class="card-body">
+        Diameter 1
+        <input type="number" id="d1" class="form-control">
+        Diameter 2
+        <input type="number" id="d2" class="form-control">
+        <div>
+        <button type="button" class="btn"
+        onclick="countbelahketupat()">
+          Hitung
+        </button>
         </div>
-        <div class="pre-step" id="pre-step">
-          <p>
-          Langkah-langkah akan muncul disini
-          </p>
-          <div class="image-container">
-            <img src="asset\pussy.png" alt="seg">
-          </div>
-        </div>
-        <div id="steps" class="fade-out" >
-          <div class="langkah-wrap">
-            <h2>Langkah-langkah</h2>
-            <div class="step-container"><strong>Step 1 :</strong><div id="step1"></div></div>
-            <div class="step-container"><strong>Step 2 :</strong><div id="step2"></div></div>
-         </div>
-         <div class="image-step-wrap">
-          <div class="image-container">
-            <img src="asset\happypussi.gif" alt="seg">
-          </div>
-        </div>   
-      </div>
+        Hasil
+        <input type="text" id="hasil" class="form-control" readonly>
       </div>
     </div>
-    <script src="formula.js"></script>
+
+    <div class="card col-sm-4" id="form-kel" style="display: none;">
+      <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn" onclick="togglekel()">Luas</button>
+          <button type="button" class="btn">Keliling</button>
+        </div>
+        <div class="image-container">
+          <img src="asset\belahketupat_img.png" alt="seg">
+        </div>
+        <div class="header-text-container">
+          <h4>Hitung Keliling Belah Ketupat</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        Sisi a
+        <input type="number" id="a" class="form-control">
+        Sisi b
+        <input type="number" id="b" class="form-control">
+        Sisi c
+        <input type="number" id="c" class="form-control">
+        Sisi d
+        <input type="number" id="d" class="form-control">
+        <div>
+        <button type="button" class="btn"
+        onclick="countbelahketupatkeliling()">
+          Hitung
+        </button>
+        </div>
+        Hasil
+        <input type="text" id="hasil-keliling" class="form-control" readonly>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <div class="keterangan">
+        <h1>Belah Ketupat</h1>
+        <article>
+          <p>
+            Belah ketupat adalah sebuah bangun datar yang bentuknya mirip ketupat. Belah ketupat memiliki empat sisi sama panjang dengan sisi-sisi yang berhadapan saling sejajar, namun sisi-sisi yang bersebelahan tidak saling tegak lurus          </p>
+        </article>         
+         <img src="asset\belahketupat.png" alt="seg">
+      </div>
+      <div class="pre-step" id="pre-step">
+        <p>
+        Langkah-langkah akan muncul disini
+        </p>
+        <div class="image-container">
+          <img src="asset\pussy.png" alt="seg">
+        </div>
+      </div>
+      <div id="steps" class="fade-out" style="display: none;">
+        <div class="langkah-wrap">
+          <h2>Langkah-langkah</h2>
+          <div class="step-container"><div id="step1"></div></div>
+          <div class="step-container"><div id="step2"></div></div>
+       </div>
+       <div class="image-step-wrap">
+        <div class="image-container">
+          <img src="asset\happypussi.gif" alt="seg">
+        </div>
+      </div>   
+    </div>
+    </div>
+  </div>
+  <script src="formula.js"></script>
   </body>
 </html>

@@ -13,19 +13,26 @@
   <body>
     <header>
       <nav class="navbar fixed-top" id="navbar">       
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="home">
             <img src="asset\logo.png" alt="Logo" class="logo">
             2D Shape Calculator
           </a>
       </nav>
     </header>
   <div class="container">
-    <div class="card col-sm-4" id="form">
+    
+    <div class="card col-sm-4" id="form-luas">
       <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn">Luas</button>
+          <button type="button" class="btn" onclick="toggleLuas()">Keliling</button>
+        </div>
         <div class="image-container">
           <img src="asset\persegi_img.png" alt="seg">
         </div>
-        <h4>Hitung Luas Persegi Panjang</h4>
+        <div class="header-text-container">
+          <h4>Hitung Luas Persegi Panjang</h4>
+        </div>
       </div>
       <div class="card-body">
         Panjang
@@ -42,12 +49,43 @@
         <input type="text" id="hasil" class="form-control" readonly>
       </div>
     </div>
+
+    <div class="card col-sm-4" id="form-kel" style="display: none;">
+      <div class="card-header">
+        <div class="button-container">
+          <button type="button" class="btn" onclick="togglekel()">Luas</button>
+          <button type="button" class="btn">Keliling</button>
+        </div>
+        <div class="image-container">
+          <img src="asset\persegi_img.png" alt="seg">
+        </div>
+        <div class="header-text-container">
+          <h4>Hitung Keliling Persegi Panjang</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        Panjang
+        <input type="number" id="panjang-kel" class="form-control">
+        Lebar
+        <input type="number" id="lebar-kel" class="form-control">
+        <div>
+        <button type="button" class="btn"
+        onclick="countpersegikeliling()">
+          Hitung
+        </button>
+        </div>
+        Hasil
+        <input type="text" id="hasil-keliling" class="form-control" readonly>
+      </div>
+    </div>
+
     <div class="overlay">
       <div class="keterangan">
         <h1>Persegi Panjang</h1>
         <article>
           <p>
-            Persegi panjang adalah bangun datar dua dimensi yang dibentuk oleh dua pasang sisi yang masing-masing sama panjang dan sejajar dengan pasangannya, dan memiliki empat buah sudut yang kesemuanya adalah sudut siku-siku.          </p>
+            Persegi panjang adalah bangun datar dua dimensi yang dibentuk oleh dua pasang sisi yang masing-masing sama panjang dan sejajar dengan pasangannya, dan memiliki empat buah sudut yang kesemuanya adalah sudut siku-siku.
+          </p>
         </article>         
          <img src="asset\persegi.png" alt="seg">
       </div>
@@ -59,10 +97,10 @@
           <img src="asset\pussy.png" alt="seg">
         </div>
       </div>
-      <div id="steps" class="fade-out"">
+      <div id="steps" class="fade-out" style="display: none;">
         <div class="langkah-wrap">
           <h2>Langkah-langkah</h2>
-          <div class="step-container"><strong>Step 1 :</strong><div id="step1"></div></div>
+          <div class="step-container"><div id="step1"></div></div>
        </div>
        <div class="image-step-wrap">
         <div class="image-container">
@@ -73,6 +111,5 @@
     </div>
   </div>
   <script src="formula.js"></script>
-</body>
   </body>
 </html>

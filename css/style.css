@@ -1,181 +1,195 @@
 body {
-    background-color: #E6F4EB;
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
-    color: #0C1D12;
+  background-color: #F3EFFB;
+  margin: 0;
+  padding: 0;
+  color: #0C1D12;
 }
 
-#navbar{
-    background-color: #E6F4EB;
-    min-height: 70px;
-    border-bottom:0.1px solid #c5c5c5;
-    
+#navbar {
+  background-color: #F3EFFB;
+  min-height: 70px;
+  border-bottom: 0.1px solid #c5c5c5;
 }
 
 .navbar-brand {
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
-    display: inline-block;
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  display: inline-block;
 }
 
 .container {
-    display: block;
-    text-align: center;
-    margin-top: 100px;
+  display: block;
+  text-align: center;
+  margin-top: 100px;
 }
 
-#form {
-    background-color: #D293BD;
-    border-color: #D293BD;
-    width: 49%; /* Set to 50% for responsiveness */
-    display: inline-block;
-    box-sizing: border-box; /* Include padding and border in the width */
-    vertical-align: top; /* Align to the top of the container */
-    margin-right: 0.5%; /* Add a small gap between the form and overlay */
-    padding: 20px;
+.card {
+  background-color: #996FDC;
+  border-color: #996FDC;
+  width: 49%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-right: 0.5%;
+  padding: 20px;
 }
 
-#form .card-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-#form .card-body{
-    text-align: left;
+.card .card-header {
+  padding-left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-#form button{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #A54585;
-
+.card .card-header .button-container button {
+  border-radius: 10px;
+  border-color: #6930C5;
 }
 
-#form h4{
-    margin-top: 10px;
+.card .card-body {
+  text-align: left;
+}
+
+.card button {
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: #6930C5;
+  color: white;
+}
+
+.card h4 {
+  margin-top: 10px;
+}
+
+.button-container {
+  width: 25%;
+}
+
+.header-text-container {
+  width: 50%;
+  padding-left: 20px;
 }
 
 .image-container {
-    width: 300px; 
-    border: 1px solid #ccc; 
-    padding: 0px;
-    box-shadow: 2px 2px 5px #888;
-    border-radius: 5px;
-    overflow: hidden;
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 0px;
+  box-shadow: 2px 2px 5px #996FDC;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.image-container img{
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .overlay {
-    width: 49%;
-    display: inline-block;
-    vertical-align: top; 
-    border-radius: 10px;
-    padding-bottom: 30px;
-    margin-left: 0.5%; 
-
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  margin-left: 0.5%;
 }
 
 .overlay img {
-    width: 100%; 
-    height: auto; 
+  width: 100%;
+  height: auto;
 }
 
-.keterangan p{
-    text-align: left;
+.keterangan p {
+  text-align: left;
 }
 
-.keterangan{
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #CDEAD6;
+.keterangan {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #DCCEF3;
 }
 
-.logo{
-    width: 70px;
+.logo {
+  width: 70px;
 }
 
-#steps{
-    width: 100%;
-    background-color: #CDEAD6;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-}
-#steps h2{
-    margin-bottom: 20px;
+#steps {
+  width: 100%;
+  background-color: #DCCEF3;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.pre-step{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    background-color: #CDEAD6;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
+#steps h2 {
+  margin-bottom: 20px;
 }
 
-.pre-step img{
-    width: 100%;
-    height: auto;
+.pre-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background-color: #DCCEF3;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.step-container{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    text-align: left;
+.pre-step img {
+  width: 100%;
+  height: auto;
 }
 
-.langkah-wrap{
-    margin-bottom: 50px;
+.step-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
 }
 
-#steps .image-step-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.langkah-wrap {
+  margin-bottom: 50px;
 }
 
-#steps .image-container img{
-    object-fit: cover;
-    width: 100%;
-    height: 200px;
+#steps .image-step-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+#steps .image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
 
 .fade-out {
-    opacity: 0;
-    transition: opacity 0.5s;
-    pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
 }
 
-.fade-in{
-    opacity: 1;
-    transition: opacity 0.5s;
-    pointer-events: none;
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
-    #form, .overlay {
-        width: 100%; 
-        margin-right: 0;
-        margin-left: 0;
-        margin-bottom: 20px;
-    }
+  .card, .overlay {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 
-::-webkit-scrollbar{
-    width: 0;
-}
+/*# sourceMappingURL=style.css.map */
