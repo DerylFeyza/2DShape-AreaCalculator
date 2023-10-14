@@ -1,24 +1,46 @@
 body {
-    background-color: #0A0C03;
+    background-color: #E6F4EB;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
-    color: #F4F9E7;
+    color: #0C1D12;
+}
+
+#navbar{
+    background-color: #E6F4EB;
+    min-height: 70px;
+    border-bottom:0.1px solid #c5c5c5;
+    
+}
+
+.navbar-brand {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    display: inline-block;
 }
 
 .container {
     display: block;
-    text-align: center; /* Center the content horizontally */
+    text-align: center;
     margin-top: 100px;
 }
 
 #form {
-    background-color: #977DDE;
-    width: 50%; /* Set to 50% for responsiveness */
+    background-color: #D293BD;
+    border-color: #D293BD;
+    width: 49%; /* Set to 50% for responsiveness */
     display: inline-block;
     box-sizing: border-box; /* Include padding and border in the width */
     vertical-align: top; /* Align to the top of the container */
-    margin-right: 1%; /* Add a small gap between the form and overlay */
+    margin-right: 0.5%; /* Add a small gap between the form and overlay */
+    padding: 20px;
 }
+
+#form .card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
 #form .card-body{
     text-align: left;
@@ -27,25 +49,43 @@ body {
 #form button{
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: #A54585;
 
+}
+
+#form h4{
+    margin-top: 10px;
+}
+
+.image-container {
+    width: 300px; 
+    border: 1px solid #ccc; 
+    padding: 0px;
+    box-shadow: 2px 2px 5px #888;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    
 }
 
 .overlay {
-    width: 48%;
+    width: 49%;
     display: inline-block;
-    background-color: #2F0F39;
-    vertical-align: top; /* Align to the top of the container */
+    vertical-align: top; 
     border-radius: 10px;
     padding-bottom: 30px;
+    margin-left: 0.5%; 
+
 }
 
 .overlay img {
-    width: 100%; /* Stretch the image to the width of its parent container */
-    height: auto; /* Maintain the aspect ratio */
-}
-
-h1 {
-    color: #4465CF;
+    width: 100%; 
+    height: auto; 
 }
 
 .keterangan p{
@@ -53,12 +93,89 @@ h1 {
 }
 
 .keterangan{
+    width: 100%;
     padding: 20px;
+    border-radius: 10px;
+    background-color: #CDEAD6;
+}
+
+.logo{
+    width: 70px;
+}
+
+#steps{
+    width: 100%;
+    background-color: #CDEAD6;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+#steps h2{
+    margin-bottom: 20px;
+}
+
+.pre-step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background-color: #CDEAD6;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pre-step img{
+    width: 100%;
+    height: auto;
+}
+
+.step-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.langkah-wrap{
+    margin-bottom: 50px;
+}
+
+#steps .image-step-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#steps .image-container img{
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+}
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+}
+
+.fade-in{
+    opacity: 1;
+    transition: opacity 0.5s;
+    pointer-events: none;
 }
 
 @media (max-width: 768px) {
     #form, .overlay {
-        width: 100%; /* Make both elements take full width on small screens */
-        margin-right: 0; /* Remove the gap between form and overlay */
+        width: 100%; 
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px;
     }
+}
+
+::-webkit-scrollbar{
+    width: 0;
 }
