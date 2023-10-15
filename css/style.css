@@ -12,10 +12,11 @@ body {
 }
 
 .navbar-brand {
-  transform: translateX(-50%);
-  left: 50%;
+  padding-left: 20px;
   position: absolute;
   display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 .container {
@@ -178,6 +179,16 @@ body {
   opacity: 1;
   transition: opacity 0.5s;
   pointer-events: none;
+}
+
+.item-container .card-title {
+  text-align: center;
+}
+
+.item-container .card {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
