@@ -190,12 +190,25 @@ body {
     text-align: center;
 }
 
+.item-container{
+    margin-bottom: 50px;
+}
 
 .item-container .card{
     width: 300px;
     height: auto;
     margin-top: 20px;
 }
+
+
+.item-container .card img{
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+
 
 @media (max-width: 768px) {
     .card, .overlay {
@@ -204,6 +217,11 @@ body {
         margin-left: 0;
         margin-bottom: 20px;
     }
+}
+
+.item-container a{
+    text-decoration: none;
+    color: #0C1D12;
 }
 
 ::-webkit-scrollbar{

@@ -185,10 +185,20 @@ body {
   text-align: center;
 }
 
+.item-container {
+  margin-bottom: 50px;
+}
+
 .item-container .card {
   width: 300px;
   height: auto;
   margin-top: 20px;
+}
+
+.item-container .card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -199,6 +209,11 @@ body {
     margin-bottom: 20px;
   }
 }
+.item-container a {
+  text-decoration: none;
+  color: #0C1D12;
+}
+
 ::-webkit-scrollbar {
   width: 0;
 }
