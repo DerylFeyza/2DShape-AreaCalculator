@@ -45,7 +45,7 @@ countpersegi = () => {
         toggleDiv();
         let step1 = panjang * lebar;
         let hasil = panjang * lebar;
-        document.getElementById('step1').innerHTML = "Kalikan "+panjang+ " dan " +lebar+ " = "+ step1;
+        document.getElementById('step1').innerHTML = panjang+ " x " +lebar+ " = "+ step1;
         document.getElementById('hasil').value = hasil;
         }
 }
