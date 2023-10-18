@@ -207,6 +207,10 @@ body {
     object-fit: cover;
 }
 
+.item-container .card-body{
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .card, .overlay {
         width: 100%; 
