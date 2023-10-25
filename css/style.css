@@ -4,9 +4,15 @@ body {
   padding: 0;
   color: #0C1D12;
 }
+:root{
+  --primary: #996FDC;
+--secondary: #DCCEF3;
+--accent: #6930C5;
+--bg: #F3EFFB;
+}
 
 #navbar {
-  background-color: #F3EFFB;
+  background-color: var(--bg);
   min-height: 70px;
   border-bottom: 0.1px solid #c5c5c5;
 }
